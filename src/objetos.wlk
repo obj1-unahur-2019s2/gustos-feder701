@@ -3,7 +3,7 @@ object rojo { method esFuerte() { return true } }
 object verde {  method esFuerte() { return true } }  
 object celeste {  method esFuerte() { return false } }  
 object pardo {  method esFuerte() { return false } }  
-
+object naranja { method esFuerte() { return true } }
 /* materiales */
 object lino { method brilla() { return false } }
 object vidrio { method brilla() { return true } }
@@ -62,8 +62,11 @@ object arito{
 }
 
 object banquito{
+	var color = naranja
 	//un banquito de madera que pesa 1700 gramos. Al principio es naranja, pero puede cambiar de color. El naranja es un color fuerte
-	method color() { return celeste }
+	
+	method color(colorNuevo) { color = colorNuevo }
+	method color(){return color}
 	method material() { return madera }  
 	method peso() { return 1700 }
 	
